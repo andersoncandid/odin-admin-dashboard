@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashbord</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar-container">
+      <ul>
+        <div class="sidebar-header">
+          <a href="#">Dashboard</a>
+        </div>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#messages">Messages</a></li>
+        <li><a href="#history">history</a></li>
+        <li><a href="#tasks">Tasks</a></li>
+        <li><a href="#communities">Communities</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#support">Support</a></li>
+        <li><a href="#privacy">Privacy</a></li>
+      </ul>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+      <form class="search-bar" action="/handling-search" method="post">
+        <input type="search" id="search" name="search" />
+      </form>
+      <ul class="header-links">
+        <li><a href="#alarm"></a></li>
+        <li><a href="#user-avatar"></a></li>
+        <li><a href="#username"></a></li>
+      </ul>
+      <div class="user-info">
+        <img src="#user-avatar" alt="User Avatar" />
+        <p>Hi there,</p>
+        <p class="user-account"></p>
+      </div>
+      <div class="buttons">
+        <button name="new">New</button>
+        <button name="upload">Upload</button>
+        <button name="share">Share</button>
+      </div>
+    </header>
+
+    <!-- Main-content -->
+    <div class="main-content">
+      <div class="cards">
+        <p class="cards-title">Your Projects</p>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+      </div>
+
+      <div class="announc">
+        <p class="announc-title">Announcements</p>
+        <div class="announc-content"></div>
+        <div class="announc-content"></div>
+        <div class="announc-content"></div>
+      </div>
+    </div>
+
+    <div class="trend">
+      <p class="trend-title">Trending</p>
+      <div class="trend-content"></div>
+      <div class="trend-content"></div>
+      <div class="trend-content"></div>
+    </div>
+  </body>
+</html>
