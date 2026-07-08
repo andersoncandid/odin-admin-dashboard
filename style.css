@@ -21,6 +21,7 @@
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul {
@@ -30,6 +31,9 @@ ul {
 /* Base */
 :root {
   font-family: "opensans-regular", system-ui, Roboto, Arial, sans-serif;
+  --color-blue: #2596be;
+  --color-orange: #F0B429;
+  --color-gray: #E2E8F0;
 }
 
 html {
@@ -40,7 +44,6 @@ html {
 body {
   min-height: 100vh;
   width: clamp(500px, 80%, 1600px);
-  padding: 10px;
   display: grid;
   grid-template-rows: 1fr 4fr;
   grid-template-columns: 1fr 4fr;
@@ -48,16 +51,48 @@ body {
 
 /* Sideboard */
 .sideboard {
-  height: 100vh;
+  height: 100%;
+  padding: 24px;
   grid-area: 1 / 1 / 3 / 2;
+  background-color: var(--color-blue);
   display: grid;
   grid-auto-rows: max-content;
   grid-template-columns: 1fr;
-  gap: 15px;
+  gap: calc(1rem + 16px);
+}
+
+.sideboard img {
+  filter: invert(100%);
+}
+
+.sideboard a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .sideboard-header {
   grid-row: 1 / 2;
+  font-size: 1.3rem;
+}
+
+.sideboard-header img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.sideboard ul li {
+  padding: 8px 0 8px 0;
+}
+.sideboard li img {
+  width: 20px;
+  height: auto;
+  margin: 0 20px 0 10px;
+}
+
+.sideboard li span {
+  font-size: 1rem;
 }
 
 .sideboard ul:first-child {
@@ -71,6 +106,7 @@ body {
 /* Header */
 .header {
   grid-area: 1 / 2 / 2 / 3;
+  padding: 24px;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 65% 35%;
@@ -101,7 +137,7 @@ body {
 /* Main Content */
 .main-content {
   height: 100%;
-  padding: 15px 10px calc(1rem + 20px) 10px;
+  padding: 24px;
   grid-area: 2 / 2 / 3 / 3;
   display: grid;
   grid-template-rows: 1fr 1fr;
