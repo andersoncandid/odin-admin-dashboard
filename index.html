@@ -11,44 +11,44 @@
     <nav class="sideboard" id="sideboard-container">
       <div class="sideboard-header">
         <a href="#">
-          <img src="icons/dashboard.svg" alt="dashboard icon" />
+          <img class="icon" src="icons/dashboard.svg" alt="dashboard icon" />
           <span>Dashboard</span></a
         >
       </div>
       <ul>
         <li>
           <a href="#home">
-            <img src="icons/home.svg" alt="dashboard icon" />
+            <img class="icon" src="icons/home.svg" alt="dashboard icon" />
             <span>Home</span></a
           >
         </li>
         <li>
           <a href="#profile">
-            <img src="icons/profile.svg" alt="dashboard icon" />
+            <img class="icon" src="icons/profile.svg" alt="dashboard icon" />
             <span>Profile</span></a
           >
         </li>
         <li>
           <a href="#messages">
-            <img src="icons/message.svg" alt="dashboard icon" />
+            <img class="icon" src="icons/message.svg" alt="dashboard icon" />
             <span>Messages</span></a
           >
         </li>
         <li>
           <a href="#history">
-            <img src="icons/clock.svg" alt="dashboard icon" />
+            <img class="icon" src="icons/clock.svg" alt="dashboard icon" />
             <span>History</span></a
           >
         </li>
         <li>
           <a href="#tasks">
-            <img src="icons/tasks.svg" alt="dashboard icon" />
+            <img class="icon" src="icons/tasks.svg" alt="dashboard icon" />
             <span>Tasks</span></a
           >
         </li>
         <li>
           <a href="#communities">
-            <img src="icons/group.svg" alt="dashboard icon" />
+            <img class="icon" src="icons/group.svg" alt="dashboard icon" />
             <span>Communities</span></a
           >
         </li>
@@ -56,19 +56,23 @@
       <ul>
         <li>
           <a href="#settings">
-            <img src="icons/cog.svg" alt="dashboard icon" />
+            <img class="icon" src="icons/cog.svg" alt="dashboard icon" />
             <span>Settings</span></a
           >
         </li>
         <li>
           <a href="#support">
-            <img src="icons/help-box.svg" alt="dashboard icon" />
+            <img class="icon" src="icons/help-box.svg" alt="dashboard icon" />
             <span>Support</span></a
           >
         </li>
         <li>
           <a href="#privacy">
-            <img src="icons/shield-check.svg" alt="dashboard icon" />
+            <img
+              class="icon"
+              src="icons/shield-check.svg"
+              alt="dashboard icon"
+            />
             <span>Privacy</span></a
           >
         </li>
@@ -78,10 +82,15 @@
     <!-- Header -->
     <header class="header">
       <form class="search-bar" action="/handling-search" method="post">
+        <img class="icon" src="icons/magnify.svg" alt="magnify glass icon" />
         <input type="search" id="search" name="search" />
       </form>
       <ul class="header-links">
-        <li><a href="#alarm"></a></li>
+        <li>
+          <a href="#alarm"
+            ><img class="icon" src="icons/bell-ring.svg" alt="alarm icon"
+          /></a>
+        </li>
         <li>
           <a href="#user-avatar"
             ><img
@@ -96,8 +105,10 @@
           src="https://avatars.githubusercontent.com/u/190989879?v=4"
           alt="User Avatar"
         />
-        <p>Hi there,</p>
-        <p class="user-account">Anderson Candido (@andersoncandid)</p>
+        <div class="user">
+          <p>Hi there,</p>
+          <p>Anderson Candido (@andersoncandid)</p>
+        </div>
       </div>
       <div class="buttons">
         <button name="new">New</button>
