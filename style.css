@@ -251,12 +251,17 @@ body {
   gap: 15px;
 }
 
-.card {
-  padding: 25px;
+.card,
+.news-container,
+.trend-container {
   background-color: #fff;
   box-shadow: var(--base-box-shadow);
+  border-radius: 8px;
+}
+
+.card {
+  padding: 25px;
   border-left: solid 5px var(--color-orange);
-  border-radius: 5px;
 }
 
 .card-title {
@@ -289,6 +294,34 @@ body {
 /* Announcements */
 .news {
   grid-area: 1 / 2 / 2 / 3;
+}
+
+.news-container {
+  padding: 32px;
+}
+
+.news-content:nth-child(1) {
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.news-content:nth-child(2) {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.news-content:nth-child(3) {
+  padding-top: 16px;
+}
+
+.news-title {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.news p {
+  font-size: 0.9rem;
 }
 
 /* Trending */
