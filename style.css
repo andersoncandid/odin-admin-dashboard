@@ -8,9 +8,7 @@
 }
 
 /* Reset */
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
 }
 
@@ -47,8 +45,12 @@ body {
   min-height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: auto 1fr;
   grid-template-columns: 18% 1fr;
+}
+
+a:not(img):hover {
+  text-decoration-line: underline;
 }
 
 /* Sideboard */
@@ -109,8 +111,7 @@ body {
 /* Header */
 .header {
   grid-area: 1 / 2 / 2 / 3;
-  padding: 24px 36px;
-  border-bottom: solid 5px rgba(#000, 0.3);
+  padding: 24px 48px;
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 60% 40%;
@@ -170,7 +171,7 @@ body {
   grid-auto-rows: min-content;
   justify-content: start;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .user-info img {
@@ -201,6 +202,7 @@ body {
 
 .buttons button {
   width: 100px;
+  height: 40px;
   font-size: 1rem;
   padding: 8px;
   color: #fff;
@@ -222,19 +224,17 @@ body {
 
 /* Main Content */
 .main-content {
-  height: 100%;
-  padding: 24px;
+  padding: 32px 90px 60px 44px;
   background-color: var(--color-gray);
   grid-area: 2 / 2 / 3 / 3;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 75% 25%;
-  gap: 15px;
+  grid-template-columns: 1fr 25%;
+  gap: 30px;
+  box-shadow: inset 0px 6px 8px -8px #000;
 }
 
-.cards-header,
-.news-header,
-.trend-header {
+.cards-header {
   margin-bottom: 10px;
   font-size: 1.1rem;
   font-weight: 700;
@@ -242,13 +242,15 @@ body {
 
 .cards {
   grid-area: 1 / 1 / 3 / 2;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .cards-container {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
+  gap: 30px;
 }
 
 .card,
@@ -260,8 +262,10 @@ body {
 }
 
 .card {
-  padding: 25px;
+  padding: 30px 26px 30px 22px;
   border-left: solid 5px var(--color-orange);
+  display: flex;
+  flex-direction: column;
 }
 
 .card-title {
@@ -271,7 +275,7 @@ body {
 }
 
 .card p:not(.card-title) {
-  margin-bottom: 32px;
+  margin-bottom: auto;
 }
 
 .card-links {
@@ -294,10 +298,18 @@ body {
 /* Announcements */
 .news {
   grid-area: 1 / 2 / 2 / 3;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.news > .news-header {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .news-container {
-  padding: 32px;
+  padding: 30px;
 }
 
 .news-content:nth-child(1) {
@@ -316,21 +328,50 @@ body {
 
 .news-title {
   margin-bottom: 5px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
 .news p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 /* Trending */
 .trend {
   grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
-.trend img {
+.trend > .trend-header {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.trend-container {
+  padding: 30px;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.trend-content {
+  display: grid;
+  grid-auto-rows: min-content;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+.trend-content img {
+  grid-area: 1 / 1 / 2 / 2;
   width: 40px;
   height: 40px;
   border-radius: 30px;
+}
+
+[href="#trend-info"] {
+  grid-area: 1 / 2 / 2 / 3;
 }
