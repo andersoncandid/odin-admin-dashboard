@@ -235,7 +235,9 @@ body {
 .cards-header,
 .news-header,
 .trend-header {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .cards {
@@ -250,8 +252,38 @@ body {
 }
 
 .card {
-  padding: 20px 15px 20px 15px;
-  border: 1px solid red;
+  padding: 25px;
+  background-color: #fff;
+  box-shadow: var(--base-box-shadow);
+  border-left: solid 5px var(--color-orange);
+  border-radius: 5px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.card p:not(.card-title) {
+  margin-bottom: 32px;
+}
+
+.card-links {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 22px);
+  justify-content: end;
+  gap: 30px;
+}
+
+.card .icon {
+  width: 22px;
+  height: auto;
+}
+
+[src="icons/share.svg"] {
+  transform: rotate(-90deg);
 }
 
 /* Announcements */
